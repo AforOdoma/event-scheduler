@@ -9,6 +9,7 @@ const Dashboard = () => {
         width="100%"
         height="600px"
         frameBorder="0"
+        title="Event Monitoring Dashboard"
       ></iframe>
     </div>
   );
