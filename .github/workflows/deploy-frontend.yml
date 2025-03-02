@@ -18,9 +18,15 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: Deploy to S3
-        run: aws s3 sync ./build s3://event-scheduler-frontend --delete
+      - name: Configure AWS CLI
+        run: |
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+          aws configure set region $AWS_REGION
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
+
+      - name: Deploy to S3
+        run: aws s3 sync ./build s3://event-scheduler-frontend --delete
