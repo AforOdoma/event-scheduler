@@ -21,3 +21,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+package-lock.json
+
+# Ignore environment variables
+event-service/.env
+
+# Ignore dependencies
+event-service/node_modules/
+
+# Ignore lock file if not needed
+event-service/package-lock.json
