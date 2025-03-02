@@ -5,7 +5,7 @@ import EventList from "../components/EventList";
 const Home = () => {
   return (
     <div>
-      <h1>AQE Event Scheduler</h1>
+      <h1>RED Event Scheduler</h1>
       <EventForm />
       <EventList />
     </div>
