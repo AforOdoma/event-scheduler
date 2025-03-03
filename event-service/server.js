@@ -16,6 +16,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.get('/api/data', (req, res) => {
+    res.json({ message: "CORS is now configured!" });
+  });
+
 // Set up PostgreSQL connection
 const pool = new Pool({
   host: process.env.DB_HOST || "terraform-20250302135207794100000002.casoqrd1myvc.us-east-1.rds.amazonaws.com",
