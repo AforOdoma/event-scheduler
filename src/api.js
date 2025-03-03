@@ -1,6 +1,6 @@
 import axios from "axios"; 
 
-const API_BASE_URL = "http://localhost:5000"; // Update with your backend URL if hosted on AWS
+const API_BASE_URL = "http://event-service-alb-69402557.us-east-1.elb.amazonaws.com"; // Use your ALB endpoint
 
 const api = axios.create({
   baseURL: API_BASE_URL,
