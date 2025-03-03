@@ -41,3 +41,12 @@ app.post("/events", (req, res) => {
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// new code
+const corsOptions = {
+  origin: "event-scheduler-frontend.s3-website-us-east-1.amazonaws.com", // Replace with your frontend URL
+  methods: "GET,POST",
+  allowedHeaders: "Content-Type",
+};
+
+app.use(cors(corsOptions));

@@ -11,7 +11,7 @@ const EventForm = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch("terraform-20250302135207794100000002.casoqrd1myvc.us-east-1.rds.amazonaws.com", {
+      const response = await fetch("event-service-alb-69402557.us-east-1.elb.amazonaws.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
